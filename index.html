@@ -81,7 +81,7 @@
                     <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
                 </div>
 
-                <button type="submit" class="submit-button">Proceed to Payment</button>
+                <a href="payment.html" class="submit-button" style="text-decoration: none; display: inline-block; text-align: center;">Proceed to Payment</a>
             </form>
         </div>
     </main>
@@ -89,4 +89,7 @@
     <script src="script.js"></script>
 </body>
 </html>
-
+document.getElementById('activationForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Stop the form from reloading the page
+  window.location.href = 'payment.html'; // Go to next page
+});
